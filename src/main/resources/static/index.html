@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpringAIChat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            🤖 <span>SpringAIChat</span>
+        </div>
+
+        <button class="new-chat" onclick="newChat()">
+            + New Chat
+        </button>
+
+        <div class="sidebar-bottom">
+            <div>⚙️ Settings</div>
+            <div class="model">
+                🟢 Gemma 3:4B
+                <small>Ollama</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Chat -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h2>AI Assistant</h2>
+                <span>Powered by Spring AI + Ollama</span>
+            </div>
+
+        </header>
+
+
+        <!-- Chat Messages -->
+        <section id="chatContainer" class="chat-container">
+
+            <!-- Welcome -->
+            <div id="welcome" class="welcome">
+
+                <div class="welcome-icon">🤖</div>
+
+                <h1>How can I help you?</h1>
+
+                <p>
+                    Ask me anything about Java, Spring Boot,
+                    programming and more.
+                </p>
+
+                <div class="suggestions">
+
+                    <button onclick="askSuggestion('What is Java?')">
+                        What is Java?
+                    </button>
+
+                    <button onclick="askSuggestion('Explain Spring Boot')">
+                        Explain Spring Boot
+                    </button>
+
+                    <button onclick="askSuggestion('What is REST API?')">
+                        What is REST API?
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Input Area -->
+        <div class="input-area">
+
+            <div class="input-box">
+
+                <textarea
+                    id="question"
+                    placeholder="Ask anything..."
+                    rows="1"
+                    onkeydown="handleKey(event)">
+                </textarea>
+
+                <button id="sendButton" onclick="sendMessage()">
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                SpringAIChat can make mistakes. Verify important information.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
