@@ -160,6 +160,8 @@ java -jar target/<YOUR_APPLICATION_JAR>.jar
 ### 6. Open the Frontend
 
 Open your frontend through the Spring Boot application's configured URL or the local development server, depending on how you have configured the project.
+front-end URL:
+##http://localhost:8080 - this will open your interface index.html from Spring boot package
 
 Make sure the frontend API endpoint matches the backend REST controller mapping.
 
